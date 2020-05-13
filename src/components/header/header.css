@@ -1,0 +1,38 @@
+.header-image {
+  background-image: url(./header.png);
+  background-size: contain;
+}
+.rounded-30 {
+	border-radius: 30px;
+}
+.shadow-dark {
+	box-shadow: 0 0 1rem rgba(0,0,0,0.2)!important;
+}
+.zind-1 {
+	z-index: 1;
+}
+.video-container {
+    flex: 0 0 36%!important;
+    max-width: 36%!important;
+	left: -3%!important;
+	bottom: 70px!important;
+	background-color: #12203a!important;
+}
+.video-round {
+	height: 90px;
+	width: 90px;
+	background: #03b5a9;
+	position: relative;
+	top: 35%;
+}
+.video-svg-icon{
+	fill: white;
+	position: relative;
+	left: 16%;
+	top: 16%;
+}
+.header-info-text{
+	background: #f3f3c1;
+	color: #474747;
+	font-size: 11px;
+}

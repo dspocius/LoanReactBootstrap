@@ -1,0 +1,58 @@
+.text {
+	font-family: 'Montserrat', sans-serif;
+}
+.btn-custom{
+	background-color: #03b5a9;
+	color: white;
+	outline: none;
+	border: none;
+    width: 20px;
+    height: 20px;
+    font-size: 27px;
+    line-height: 22px;
+}
+.btn-custom:focus{
+	outline: none;
+	border: none;
+}
+.btn-custom.btn-minus span{
+	position: relative;
+	bottom: 2px;
+}
+.slider-text{
+	font-size:13px;
+}
+/* noUI custom styles */
+.noUi-horizontal .noUi-connects {
+	background-color: #12203a;
+	border: 1px solid #12203a;
+    outline: none;
+	border-radius: 20px;
+}
+.noUi-target{
+	border: none!important;
+	box-shadow: none!important;
+}
+.noUi-horizontal{
+	height: 20px!important;
+}
+.noUi-horizontal .noUi-connects .noUi-connect{
+	background-color: #f46113;
+}
+.noUi-horizontal .noUi-handle {
+    border-radius: 50%;
+    width: 34px!important;
+    height: 34px!important;
+	right: -17px !important; /*  must be (width / 2) * -1 */
+	top: -8px!important;
+    background: #03b5a9;
+    box-shadow: none;
+    border: 3px solid white;
+}
+.noUi-horizontal .noUi-handle:focus{
+	border: 3px solid white;
+	outline:none;
+}
+.noUi-horizontal .noUi-handle::after,  .noUi-horizontal .noUi-handle::before{
+	display: none;
+}
