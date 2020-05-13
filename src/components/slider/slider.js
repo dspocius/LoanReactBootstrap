@@ -10,10 +10,9 @@ import Row from 'react-bootstrap/Row';
   state = { ref: null, currentValue: this.props.from };
  
   onSlide = (render, handle, value, un, percent) => {
-	  this.state.currentValue = Math.round(value[0]);
-	  
-	  this.props.onSelectValue(this.state.currentValue);
-	  this.forceUpdate();
+	  this.setState({ currentValue: Math.round(value[0]) }, () => {
+	    this.props.onSelectValue(this.state.currentValue);
+	  });
   }; 
  
   doIncrement = () => {
@@ -29,9 +28,9 @@ import Row from 'react-bootstrap/Row';
 	  }
 	  
       ref.noUiSlider.set(this.state.currentValue + increment);
-	  this.state.currentValue = parseInt(ref.noUiSlider.get());
-	  this.props.onSelectValue(this.state.currentValue);
-	  this.forceUpdate();
+	  this.setState({ currentValue: parseInt(ref.noUiSlider.get()) }, () => {
+		  this.props.onSelectValue(this.state.currentValue);
+	  });
     }
   };
   
@@ -48,9 +47,9 @@ import Row from 'react-bootstrap/Row';
 	  }
 	  
       ref.noUiSlider.set(this.state.currentValue - increment);
-	  this.state.currentValue = parseInt(ref.noUiSlider.get());
-	  this.props.onSelectValue(this.state.currentValue);
-	  this.forceUpdate();
+	  this.setState({ currentValue: parseInt(ref.noUiSlider.get()) }, () => {
+		  this.props.onSelectValue(this.state.currentValue);
+	  });
     }
   };
  
@@ -60,7 +59,9 @@ import Row from 'react-bootstrap/Row';
 		max: this.props.to
 	};
 	
-	if (this.props.currentValue !== this.state.currentValue) {
+	//TODO: find another solution
+	//Workaround for updating term
+	if (this.props.updatedTerm !== undefined && this.props.updatedTerm === true && this.props.currentValue !== this.state.currentValue) {
 		this.state.currentValue = this.props.currentValue;
 	}
 	

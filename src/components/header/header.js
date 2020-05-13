@@ -1,15 +1,19 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styles from './header.css';
 import Pricing from '../pricing';
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
+import bike from './bike.png';
+import bench from './bench.png';
+import cloud from './cloud.png';
 
 const header = props => (
   <div>
   <Container fluid className="header-image pt-4">
     <Row className="justify-content-md-center pt-5">
+	  <img src={cloud} alt="" className="cloud-img" />
+	  <img src={cloud} alt="" className="cloud-smaller-img" />
       <Col className="my-5 p-3 py-4 pb-5 bg-white rounded-30 shadow-dark zind-1" sm="10" md="7" lg="6" xl="4">
 	    <Pricing/>
 	  </Col>
@@ -22,21 +26,20 @@ const header = props => (
 		</div>
       </Col>
     </Row>
+	<img src={bike} alt="Bike" className="bike-img" />
+	<img src={bench} alt="Bench" className="bench-img" />
   </Container>
-  	<Row>
+  <Container fluid>
+  	<Row className="text-center text header-info-text">
 	  <Col>
-	    <p className="p-3 text-center text header-info-text">
+	    <p className="pt-3">
 		  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 	    </p>
 	  </Col>
 	</Row>
+  </Container>
   </div>
 );
 
-const headerPropTypes = {
-	// always use prop types!
-};
-
-header.propTypes = headerPropTypes;
 
 export default header;

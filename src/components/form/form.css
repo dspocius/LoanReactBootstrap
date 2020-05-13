@@ -1,1 +1,42 @@
-/* todo: delete file if not needed */
+.loan-select-container{
+	background: #12203a;
+	color: white;
+	border-radius:30px;
+	box-shadow: 0px 0px 28px -17px black;
+}
+.hr{
+	border-top: 1px solid #666;
+}
+.rounded-select select{
+	border-radius: 40px;
+	font-weight: bold;
+	font-size: 17px;
+	color: black;
+}
+.inputs-rounded input{
+	border-radius: 40px;
+	font-size: 17px;
+	color: black;
+	padding: 15px;
+	height: auto;
+}
+.btn-form-icon{
+	font-size: 17px;
+    line-height: 19px;
+}
+.btn-next{
+	font-size: 20px!important;
+}
+.check-icon{
+	fill: #f46113;
+	font-weight: bold;
+}
+.form-control.is-invalid, .was-validated .form-control:invalid{
+	background: #f2dedf;
+	border: 1px solid #ebccd1!important;
+	background-image:none!important;
+	color: #a84446!important;
+}
+.invalid-feedback{
+	color: red!important;
+}

@@ -1,6 +1,7 @@
 .header-image {
   background-image: url(./header.png);
   background-size: contain;
+  position:relative;
 }
 .rounded-30 {
 	border-radius: 30px;
@@ -35,4 +36,44 @@
 	background: #f3f3c1;
 	color: #474747;
 	font-size: 11px;
+}
+.bench-img{
+	position:absolute;
+	width:170px;
+	bottom:-40px;
+	right:100px;
+}
+.bike-img{
+	position:absolute;
+	width:170px;
+	bottom:0px;
+}
+.cloud-img{
+	position:absolute;
+	width:130px;
+	top:20px;
+	left: 20%;
+	animation: cloudgo 5s infinite;
+}
+.cloud-smaller-img{
+	position:absolute;
+	width:80px;
+	top: 40px;
+	left: 40%;
+	animation: cloudsmallgo 5s infinite;
+}
+
+@keyframes cloudgo {
+  0%   { left:20%; }
+  25%  { left:25%; }
+  50%  { left:30%; }
+  75%  { left:25%; }
+  100% { left:20%; }
+}
+@keyframes cloudsmallgo {
+  0%   { left:40%;  }
+  25%  { left:35%;  }
+  50%  { left:30%;  }
+  75%  { left:35%; }
+  100% { left:40%;  }
 }
