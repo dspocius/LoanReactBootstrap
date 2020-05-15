@@ -75,10 +75,10 @@ import Row from 'react-bootstrap/Row';
     return (
       <div className="py-3">
 	    <Row>
-		  <Col sm="1">
+		  <Col xs="1" sm="1">
             <button className="rounded-circle text btn-custom p-0 align-top btn-minus" onClick={this.doDecrease}><span>-</span></button>
 		  </Col>
-		  <Col sm="7">
+		  <Col xs="7" sm="7">
             <Nouislider
               instanceRef={instance => {
                if (instance && !this.state.ref) {
@@ -92,10 +92,10 @@ import Row from 'react-bootstrap/Row';
 		      onSlide={this.onSlide}
             />
 		  </Col>
-		  <Col sm="0">
+		  <Col xs="0" sm="0">
 		    <button className="rounded-circle text btn-custom align-top p-0" onClick={this.doIncrement}>+</button>
 		  </Col>
-		  <Col sm="3" className="p-0">
+		  <Col xs="3" sm="3" className="p-0">
 		    <div className="text text-right font-weight-bold slider-text">
               {this.props.formatValue}
             </div>

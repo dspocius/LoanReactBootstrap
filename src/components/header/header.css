@@ -1,6 +1,6 @@
 .header-image {
   background-image: url(./header.png);
-  background-size: contain;
+  background-size: cover;
   position:relative;
 }
 .rounded-30 {
@@ -13,11 +13,10 @@
 	z-index: 1;
 }
 .video-container {
-    flex: 0 0 36%!important;
-    max-width: 36%!important;
 	left: -3%!important;
 	bottom: 70px!important;
 	background-color: #12203a!important;
+	height: 300px;
 }
 .video-round {
 	height: 90px;
@@ -76,4 +75,10 @@
   50%  { left:30%;  }
   75%  { left:35%; }
   100% { left:40%;  }
+}
+@media only screen and (max-width: 991px) {
+.video-container {
+	left: 0px!important;
+	bottom: 50px!important;
+}
 }
